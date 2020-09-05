@@ -1,0 +1,132 @@
+.footer .link:hover,
+.footer .link:focus {
+    color: $accent-color;
+}
+
+footer {
+    background-color: #2F303A;
+}
+
+.container.footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;   
+    padding: 60px 15px;
+    width: 1200px;
+}
+
+.address,
+.address-street,
+.appeal-text,
+.footer .social-link {
+    font-style: normal;
+    color: $primary-white-color;
+    transition: background-color 250ms $timing-function;
+}
+
+.flex:not(:last-child) {
+    width: calc((50% - 45px)/2);
+    margin-right: 30px;
+}
+
+.address {
+    font-size: 14px;
+    line-height: 1.71;
+    /*outline: solid 2px tan ;*/
+}
+
+/*.appeal {
+    outline: solid 2px tan ;
+}*/
+
+.footer .contacts-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.appeal-text {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.social-list {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: flex-start;
+    color: $secondary-text-color;
+}
+
+.footer .social-list {
+    margin-bottom: 0;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer .social-link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
+    transition: background-color 250ms $timing-function,
+        transform 500ms $timing-function;
+}
+
+.footer .insta {
+    background-image: url(../img/icon/instagram-w.svg);  
+}
+
+.footer .twit {
+    background-image: url(../img/icon/twitter-w.svg);  
+}
+
+.footer .fb {
+    background-image: url(../img/icon/facebook-w.svg);  
+}
+
+.footer .li {
+    background-image: url(../img/icon/linkedin-w.svg);  
+}
+
+.footer .social-link:hover,
+.footer .social-link:focus {
+    background-color: $accent-color;
+    transform: scale(1.25);
+}
+
+.appeal.sign {
+    display: flex;
+    align-items: flex-end;
+    width: calc(50%-15px);
+}
+
+.e-mail {
+    padding: 0;
+    padding-left: 16px;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 1.25;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.email-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}

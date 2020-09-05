@@ -1,0 +1,16 @@
+.site-nav-list {
+    display: flex;
+    padding: 0;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav-list .link {
+    color: $primary-text-color;
+}
+
+.site-nav-list .link.current {
+    color: $accent-color;
+}

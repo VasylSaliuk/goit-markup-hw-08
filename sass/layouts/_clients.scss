@@ -1,0 +1,31 @@
+.clients {
+    display: flex;
+
+    &-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 170px;
+        height: 90px;
+        border: 1px solid #AFB1B8;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: #AFB1B8;
+        transform: rotate(0deg);
+        transition: background-color 250ms $timing-function,
+            transform 500ms $timing-function;
+    }
+    
+    &-link:hover,
+    &-link:focus {
+        border: 1px solid $accent-color;
+        color: $accent-color;
+        transform: rotate(360deg);
+    }
+
+    .item-clients:not(:nth-child(6n)) {
+        margin-right: 30px;
+    }
+}
+
+

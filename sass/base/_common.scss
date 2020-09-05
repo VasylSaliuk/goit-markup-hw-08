@@ -1,0 +1,126 @@
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+    font-style: normal;
+    letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    margin: 0;
+}
+
+ 
+p {
+    color: $secondary-text-color;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    margin: 0;
+    padding: 94px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    /*outline: solid 2px tomato;*/
+}
+
+.link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration-line:none;
+    color: $secondary-text-color;
+    transition: background-color 250ms $timing-function;
+}
+
+.nav-link:hover:hover,
+.nav-link:focus {
+    color: $accent-color;
+}
+
+.link.current::after {
+    display: block;
+    content: "";
+    height: 4px;
+    margin: 0;
+    margin-top: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: $accent-color;
+    border-radius: 2px;
+}
+
+.link::before {
+    content:'';
+    z-index:0;
+    position:absolute;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    filter:blur(15px);
+    opacity:0;
+    background: linear-gradient(60deg, rgba(247, 149, 51, 0.5), rgba(243, 112, 85, 0.5), rgba(239, 78, 123, 0.5), rgba(161, 102, 171, 0.5), rgba(80, 115, 184, 0.5), rgba(16, 152, 173, 0.5), rgba(7, 179, 155, 0.5), rgba(110, 185, 129, 0.5));
+    transition: 300ms opacity ease-in-out;
+}
+
+.link:hover::before,
+.link:focus::before {
+    opacity: 1;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+
+.navigation {
+    display: flex;
+    align-items: baseline;
+    margin-right: auto;
+}
+
+.no-padding {
+    padding-top: 0;
+}
+
+/*Стилизация заголовков*/
+
+.section-title {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}

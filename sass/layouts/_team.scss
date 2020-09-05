@@ -1,0 +1,40 @@
+.section.team {
+    background-color: $secondary-background-color;
+}
+
+.list-team {
+    display: flex;
+}
+
+.card-team:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
+.card-team {
+    width: calc((100% - 30px*3)/4);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+    background-color: $primary-white-color;
+}
+
+.card-team .social-list {
+    justify-content: center;
+}
+
+.photo-team {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.name-team {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.position-team {
+    text-align: center;
+    margin-bottom: 16px;
+}
