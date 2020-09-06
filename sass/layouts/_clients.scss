@@ -1,11 +1,13 @@
 .clients {
     display: flex;
-
+    flex-wrap: wrap;
+    
     &-link {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 170px;
+        width: 210px;
+        // width: 170px;
         height: 90px;
         border: 1px solid #AFB1B8;
         box-sizing: border-box;
@@ -23,9 +25,17 @@
         transform: rotate(360deg);
     }
 
-    .item-clients:not(:nth-child(6n)) {
+    .item-clients:not(:nth-child(2n)) {
         margin-right: 30px;
     }
+
+    .item-clients:nth-child(-n + 4) {
+        margin-bottom: 30px;
+    }
+
+    // .item-clients:not(:nth-child(6n)) {
+    //     margin-right: 30px;
+    // }
 }
 
 

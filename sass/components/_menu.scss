@@ -1,16 +1,21 @@
-.site-nav-list {
-    display: flex;
-    padding: 0;
+
+
+@media (min-width: $tablet), (min-width: $desktop) {
+    .site-nav-list {
+        display: flex;
+        padding: 0;
+    }
+    
+    .nav-item:not(:last-child) {
+        margin-right: 50px;
+    }
+    
+    .site-nav-list .link {
+        color: $primary-text-color;
+    }
+    
+    .site-nav-list .link.current {
+        color: $accent-color;
+    }
 }
 
-.nav-item:not(:last-child) {
-    margin-right: 50px;
-}
-
-.site-nav-list .link {
-    color: $primary-text-color;
-}
-
-.site-nav-list .link.current {
-    color: $accent-color;
-}

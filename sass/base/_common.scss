@@ -13,11 +13,17 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+* {
+    outline: solid 2px tomato;
 }
+
+* {
+    &::before,
+    &::after {
+        box-sizing: inherit;
+}
+}
+
 
 body {
     margin: 0;
@@ -47,12 +53,31 @@ ul {
     list-style: none;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
 .container {
+    width: 100%;
     margin: 0;
-    padding: 94px 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    padding: 60px 15px;
+    
+    @media (min-width: $mobile) {
+        width: 480px;
+    }
+
+    @media (min-width: $tablet) {
+        width: 768px;
+    }
+
+    @media (min-width: $desktop) {
+        padding: 94px 15px;
+        width: 1200px;
+    }
     /*outline: solid 2px tomato;*/
 }
 
@@ -112,15 +137,23 @@ ul {
 }
 
 .no-padding {
-    padding-top: 0;
+    @media (min-width: $desktop){
+        padding-top: 0;
+    }
 }
 
 /*Стилизация заголовков*/
 
 .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: bold;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
+
+    @media (min-width: $desktop) {
+        font-size: 36px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+    }
 }

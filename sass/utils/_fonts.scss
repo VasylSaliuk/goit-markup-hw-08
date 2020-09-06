@@ -1,39 +1,45 @@
 @font-face {
     font-family: 'Raleway';
-    src: url('../../fonts/raleway-v17-latin-700.woff') format('woff'),
-         url('../../fonts/raleway-v17-latin-700.woff2') format('woff2');
+    src: local(''), 
+        url('../../fonts/raleway-v17-latin-700.woff') format('woff'),
+        url('../../fonts/raleway-v17-latin-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/roboto-v20-latin-regular.woff') format('woff'),
-         url('../../fonts/roboto-v20-latin-regular.woff2') format('woff2');
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../../fonts/roboto-v20-latin_cyrillic-regular.woff') format('woff'),
+        url('../../fonts/roboto-v20-latin_cyrillic-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/roboto-v20-latin-500.woff') format('woff'),
-         url('../../fonts/roboto-v20-latin-500.woff2') format('woff2');
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../../fonts/roboto-v20-latin_cyrillic-500.woff') format('woff'),
+         
+        url('../../fonts/roboto-v20-latin_cyrillic-500.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/roboto-v20-latin-700.woff') format('woff'),
-         url('../../fonts/roboto-v17-latin-700.woff2') format('woff2');
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../../fonts/roboto-v20-latin_cyrillic-700.woff') format('woff'),
+        url('../../fonts/roboto-v20-latin_cyrillic-700.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/roboto-v20-latin-900.woff') format('woff'),
-         url('../../fonts/roboto-v20-latin-900.woff2') format('woff2');
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../../fonts/roboto-v20-latin_cyrillic-900.woff') format('woff'),
+        url('../../fonts/roboto-v20-latin_cyrillic-900.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
 }

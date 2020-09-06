@@ -27,7 +27,11 @@
 }
 
 .button.main {
-    margin-bottom: 200px;
+    margin-bottom: 118px;
+
+    @media (min-width: $desktop) {
+        margin-bottom: 200px;
+    }
 }
 
 .button-close {

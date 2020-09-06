@@ -9,15 +9,14 @@
     align-items: center;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 200px;
-    padding-bottom: 280px;
+    padding-top: 119px;
+    padding-bottom: 198px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
         rgba(47, 48, 58, 0.8)
     ),
-    url(../img/Header-img.jpg);
-    height: 600px;
+    url(../../img/mobile/Hero-img.jpg);     
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -28,8 +27,27 @@
 .section-title.main-title {
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
+
+// @media (min-width: $desktop) {
+//     .hero-section {
+//         padding-top: 200px;
+//         padding-bottom: 280px;
+//         url(../img/Header-img.jpg);
+//         height: 600px;
+//     }
+
+//     .section-title.main-title {
+//         margin-bottom: 30px;
+//         font-weight: 900;
+//         font-size: 44px;
+//         line-height: 1.36;
+//         letter-spacing: 0.06em;
+//         text-transform: uppercase;
+//     }
+// }
+

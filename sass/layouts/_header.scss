@@ -10,15 +10,15 @@ header {
 }
 
 .header {
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: flex-end;
     padding: 32px 15px;
     padding-bottom: 0px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
 }
 
 .header .contacts-list {
-    display: flex;
+    // display: flex;
     padding: 0;
 }
 
