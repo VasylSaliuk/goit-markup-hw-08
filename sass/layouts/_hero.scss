@@ -2,11 +2,41 @@
     color: $primary-white-color;
     /*background-color: rgba(47, 48, 58, 0.8);*/
 }
+.hero-banner {
+    margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(47, 48, 58, 0.4);
+
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    
+    @media screen and (max-width: 767px) {
+		height: 400px;
+		max-width: 480px;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../../img/mobile/Hero-img-mob.jpg");
+    }
+    
+    @media screen and (min-width: 768px) {
+		height: 400px;
+		max-width: 768px;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../../img/tablet/Header-img-tab.jpg");
+    }
+    
+    @media screen and (min-width: 1200px) {
+		height: 600px;
+		max-width: 1600px;
+
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url("../../img/Header-img.jpg");
+    }
+
+}
 
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-right: auto;
     margin-left: auto;
     padding-top: 119px;
@@ -22,6 +52,11 @@
     background-position: center;
     text-align: center;
     background-color: rgba(47, 48, 58, 0.8);
+
+    @media screen and (min-width: $desktop) {
+            padding-top: 200px;
+            padding-bottom: 280px;
+    }
 }
 
 .section-title.main-title {
@@ -31,23 +66,9 @@
     line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
-
-// @media (min-width: $desktop) {
-//     .hero-section {
-//         padding-top: 200px;
-//         padding-bottom: 280px;
-//         url(../img/Header-img.jpg);
-//         height: 600px;
-//     }
-
-//     .section-title.main-title {
-//         margin-bottom: 30px;
-//         font-weight: 900;
-//         font-size: 44px;
-//         line-height: 1.36;
-//         letter-spacing: 0.06em;
-//         text-transform: uppercase;
-//     }
-// }
-
