@@ -1294,14 +1294,16 @@ img {
           transform: scale(1.25);
 }
 
-.item-clients {
-  width: calc((100% - 30px * 3) / 3);
-  margin: 15px;
-}
-
 @media screen and (max-width: 767px) {
   .item-clients {
     width: calc((100% - 30px * 2) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .item-clients {
+    width: calc((100% - 30px * 3) / 3);
     margin: 15px;
   }
 }
