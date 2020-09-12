@@ -16,21 +16,42 @@
 		height: 400px;
 		max-width: 480px;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url("../../img/mobile/Hero-img-mob.jpg");
+            url("../../img/background/Hero-img-mobile.jpg");
+            
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			    url("../../img/background/Hero-img-mobile@2x.jpg ");
+        }
     }
     
     @media screen and (min-width: $tablet) {
 		height: 400px;
 		max-width: 768px;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url("../../img/tablet/Header-img-tab.jpg");
+            url("../../img/background/Hero-img-tablet.jpg");
+            
+        @media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../../img/background/Hero-img-tablet@2x.jpg");
+        }
     }
     
     @media screen and (min-width: $desktop) {
 		height: 600px;
 		max-width: 1600px;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url("../../img/Header-img.jpg");
+            url("../../img/background/Hero-img-desktop.jpg");
+            
+        @media screen and (min-device-pixel-ratio: 2),
+			screen and (min-resolution: 192dpi),
+			screen and (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url("../../img/background/Hero-img-desktop@2x.jpg");
+		}
     }
 }
 
@@ -52,13 +73,3 @@
         line-height: 1.36;
     }
 }
-
-// margin-right: auto;
-//     margin-left: auto;
-//     padding-top: 119px;
-//     padding-bottom: 198px;
-    
-//     @media screen and (min-width: $desktop) {
-//             padding-top: 200px;
-//             padding-bottom: 280px;
-//     }
