@@ -46,10 +46,9 @@
     box-shadow: 0 0 1pt 1pt $accent-color;
 }
 
-.btn-submit:disabled, 
-.btn-submit:disabled:hover {
-    background-color: silver;
-    border-color: gray;
+.btn-submit {
+    display: block;
+    margin: 0 auto;
 }
 
 .form-button {
