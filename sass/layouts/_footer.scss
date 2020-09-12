@@ -1,138 +1,129 @@
-.footer .link:hover,
-.footer .link:focus {
-    color: $accent-color;
-}
-
-footer {
+.footer {
     background-color: #2F303A;
 }
 
-.container.footer {
-    // display: flex;
-    // align-items: baseline;
-    // justify-content: flex-start; 
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;  
-    padding: 60px 15px;
-    // width: 1200px;
+.footer-flex {
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: center;
+	}
 }
 
-.address,
-.address-street,
-.appeal-text,
-.footer .social-link {
-    font-style: normal;
-    color: $primary-white-color;
-    transition: background-color 250ms $timing-function;
+.footer-contacts-social {
+	@media screen and (min-width: 768px) {
+		display: flex;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		justify-content: space-around;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: calc((100% - 30px) / 2);
+		justify-content: space-between;
+		align-items: baseline;
+	}
 }
 
-// .flex:not(:last-child) {
-//     width: calc((50% - 45px)/2);
-//     margin-right: 30px;
-// }
+.footer-contacts,
+.appeal {
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: calc((100% - 30px) / 2);
+	}
+}
 
 .address {
+    margin-bottom: 8px;
+    font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-    margin-bottom: 60px;
-
-    @media (min-width: $desktop) {
-        margin-bottom: 0px;
-    }
+    color: $primary-white-color;
 }
 
-.footer .contacts-link {
+.footer-link {
+    font-size: 14px;
+    line-height: 1.14;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.address-item:not(:last-child) {
-    margin-bottom: 9px;
+.footer-contacts-item:not(:last-child) {
+    margin-bottom: 8px;
 }
 
 .appeal-text {
     display: block;
+    margin-top: 0;
+	margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    color: $primary-white-color;
+
+    @media screen and (max-width: 767px) {
+		text-align: center;
+	}    
 }
 
-.social-list {
-    display: flex;
-    margin-bottom: 24px;
-    // justify-content: flex-start;
-    justify-content: center;
-    color: $secondary-text-color;
-}
-
-.footer .social-list {
-    margin-bottom: 0;
-}
-
-.social-item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.footer .social-link {
-    display: inline-block;
-    width: 44px;
-    height: 44px;
+.footer-social-link {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
     transform: scale(1);
-    transition: background-color 250ms $timing-function,
+    transition: background-color $timing-function,
         transform 500ms $timing-function;
 }
 
-.footer .insta {
-    background-image: url(../img/icon/instagram-w.svg);  
+.footer-form {
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
+	@media screen and (min-width: $desktop) {
+		width: calc((100% - 30px) / 2);
+		margin-left: auto;
+	}
 }
 
-.footer .twit {
-    background-image: url(../img/icon/twitter-w.svg);  
+.subscribe-form {
+	@media screen and (min-width: $desktop) {
+		display: flex;
+	}
 }
 
-.footer .fb {
-    background-image: url(../img/icon/facebook-w.svg);  
-}
+.footer-email-input {
+	padding: 15px;
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
 
-.footer .li {
-    background-image: url(../img/icon/linkedin-w.svg);  
-}
-
-.footer .social-link:hover,
-.footer .social-link:focus {
-    background-color: $accent-color;
-    transform: scale(1.25);
-}
-
-.appeal.sign {
-    margin-top: 60px;
-    // display: flex;
-    // align-items: flex-end;
-    // width: calc(50%-15px);
-}
-
-.e-mail {
-    padding: 0;
-    padding-left: 16px;
-    margin-right: 12px;
-    width: 100%;
-    // width: 358px;
-    height: 50px;
-    font-size: 16px;
+	font-size: 16px;
     line-height: 1.25;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
+	color: $primary-white-color;
+	background-color: transparent;
+	outline: none;
+	transition: border-color $timing-function;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-}
 
-.email-form input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+	&::placeholder {
+		font-size: 16px;
+        line-height: 1.25;
+		color: $secondary-text-color;
+	}
+
+	&:focus {
+		border-color: $accent-color;
+	}
+
+	@media screen and (max-width: 1199px) {
+		display: block;
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto 20px auto;
+	}
+
+	@media screen and (min-width: $desktop) {
+		min-width: 358px;
+		margin-right: 12px;
+    }
 }

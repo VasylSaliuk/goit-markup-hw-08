@@ -7,10 +7,11 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms $timing-function;
+    transition: opacity $timing-function;
 
-    @media screen and (max-width: $tablet) {
-        overflow: scroll;
+    @media screen and (max-width: 767px) {
+        overflow-y: scroll;
+        padding: 93px 15px;
     }
 }
 
@@ -25,10 +26,8 @@
 }
 
 .modal {
-    position: absolute;
+    position: relative;
     padding: 20px;
-    max-width: 528px;
-    max-height: 581px;
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -37,11 +36,19 @@
     transition: transform 500ms $timing-function,
       opacity 500ms $timing-function;
 
-    @media screen and (min-width: $tablet) {
-        padding: 40px;
+    @media screen and (min-width: 600px) {
+        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
+        max-width: 450px;
+        max-height: 609px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding: 40px;
+        max-width: 528px;
+        max-height: 581px;
     }
 
     &-title {
@@ -156,7 +163,7 @@
         align-items: center;
         margin-left: 13px;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 1.71;
     }
 }
 
@@ -183,7 +190,7 @@
 .checkbox:checked + .icon-check {
     border-color: $accent-color;
     background-color: $accent-color;
-    background-image: url(../img/icon/icon-check.svg);
+    background-image: url(../../img/icon/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
 }

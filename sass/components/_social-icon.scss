@@ -1,5 +1,22 @@
+.social-list {
+    display: flex;
+
+	@media screen and (max-width: 767px) {
+		justify-content: center;
+	}
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon {
+    fill: currentColor;
+    transition: background-color $timing-function;
+}
+
 .social-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -7,13 +24,33 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    color: #AFB1B8;
+    color: $primary-icon-color;
     transform: scale(1);
-    transition: transform 250ms $timing-function;
+    transition: transform $timing-function;
 }
 
-.team .social-link:hover,
-.team .social-link:focus {
+.insta {
+    background-image: url(../img/icon/instagram-w.svg);  
+}
+
+.twit {
+    background-image: url(../img/icon/twitter-w.svg);  
+}
+
+.fb {
+    background-image: url(../img/icon/facebook-w.svg);  
+}
+
+.li {
+    background-image: url(../img/icon/linkedin-w.svg);  
+}
+
+.footer-social-link {
+    background-color: rgba(255, 255, 255, 0.1);  
+}
+
+.social-link:hover,
+.social-link:focus {
     background-color: $accent-color;
     color: #ffffff;
     transform: scale(1.25);
@@ -30,14 +67,4 @@
     100% {
         background-color: $accent-color;
     }
-}
-
-.social-link:hover,
-.social-link:focus {
-    color: $accent-color;
-}
-
-.icon {
-    fill: currentColor;
-    transition: background-color 250ms $timing-function;
 }

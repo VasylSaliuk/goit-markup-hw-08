@@ -13,9 +13,9 @@ html {
     box-sizing: border-box;
 }
 
-* {
-    outline: solid 2px tomato;
-}
+// * {
+//     outline: solid 1px tomato;
+// }
 
 * {
     &::before,
@@ -24,7 +24,6 @@ html {
 }
 }
 
-
 body {
     margin: 0;
     font-family: Roboto, sans-serif;
@@ -32,6 +31,10 @@ body {
     background-color: $primary-white-color;
     font-style: normal;
     letter-spacing: 0.03em;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 h1,
@@ -78,35 +81,23 @@ img {
         padding: 94px 15px;
         width: 1200px;
     }
-    /*outline: solid 2px tomato;*/
 }
 
 .link {
     position: relative;
+    display: inline-block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration-line:none;
     color: $secondary-text-color;
-    transition: background-color 250ms $timing-function;
-}
+    transition: background-color $timing-function;
 
-.nav-link:hover:hover,
-.nav-link:focus {
-    color: $accent-color;
-}
-
-.link.current::after {
-    display: block;
-    content: "";
-    height: 4px;
-    margin: 0;
-    margin-top: 28px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background: $accent-color;
-    border-radius: 2px;
+    @media screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 1.17;
+    }
 }
 
 .link::before {
@@ -130,15 +121,11 @@ img {
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 }
 
-.navigation {
-    display: flex;
-    align-items: baseline;
-    margin-right: auto;
-}
-
 .no-padding {
-    @media (min-width: $desktop){
-        padding-top: 0;
+    padding-top: 0;
+
+    @media screen and (max-width: 1199px) {
+        display: none;    
     }
 }
 
