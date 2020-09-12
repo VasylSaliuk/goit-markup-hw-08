@@ -23,7 +23,8 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		width: calc((100% - 30px * 3) / 3);
+        width: calc((100% - 30px * 3) / 3);
+        max-width: 370px;
 	}
 
 	box-shadow: 1px 0px 0px rgba(0, 0, 0, 0);
