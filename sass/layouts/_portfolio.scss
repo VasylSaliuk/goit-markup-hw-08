@@ -7,18 +7,22 @@
 }
 
 .card {
+    
     @media screen and (max-width: 767px) {
+        max-width: 450px;
+
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
 	}
 
-	@media screen and (min-width: 768px) {
-		width: calc((100% - 30px * 2) / 2);
+	@media screen and (min-width: $tablet) {
+        width: calc((100% - 30px * 2) / 2);
+        max-width: 354px;
 		margin: 15px;
 	}
 
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $desktop) {
 		width: calc((100% - 30px * 3) / 3);
 	}
 
@@ -37,7 +41,6 @@
 }
 
 .border-card {
-    z-index: 1;
     padding: 20px 24px;
     border-right: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
@@ -49,7 +52,7 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 2;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     color: $primary-text-color;
 }
 
@@ -65,11 +68,11 @@
 
 .overlay-info {
     position: absolute;
+    display: flex;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    display: flex;
     padding: 24px;
     pointer-events: none;
     font-size: 18px;
