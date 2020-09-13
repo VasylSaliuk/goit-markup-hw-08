@@ -97,7 +97,8 @@ img {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (min-width: 480px) {
@@ -114,8 +115,29 @@ img {
 
 @media (min-width: 1200px) {
   .container {
-    padding: 94px 15px;
     width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
+}
+
+.section.no-padding {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .section.no-padding {
+    display: none;
   }
 }
 
@@ -161,16 +183,6 @@ img {
 .link:focus::before {
   opacity: 1;
   background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-}
-
-.no-padding {
-  padding-top: 0;
-}
-
-@media screen and (max-width: 1199px) {
-  .no-padding {
-    display: none;
-  }
 }
 
 /*Стилизация заголовков*/
@@ -233,7 +245,7 @@ img {
   text-align: center;
   border: 0;
   padding: 10px 32px;
-  width: 200px;
+  max-width: 200px;
   height: 50px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -850,7 +862,7 @@ img {
 .checkbox:checked + .icon-check {
   border-color: #2196f3;
   background-color: #2196f3;
-  background-image: url(../../img/icon/icon-check.svg);
+  background-image: url(../img/icon/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
 }

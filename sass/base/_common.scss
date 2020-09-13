@@ -67,7 +67,8 @@ img {
     margin: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 60px 15px;
+    padding-right: 15px;
+    padding-left: 15px;
     
     @media (min-width: $mobile) {
         width: 480px;
@@ -78,8 +79,24 @@ img {
     }
 
     @media (min-width: $desktop) {
-        padding: 94px 15px;
         width: 1200px;
+    }
+}
+
+.section {
+	@media screen and (max-width: 1199px) {
+		padding: 60px 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 94px 0;
+    }
+    
+    &.no-padding {
+        padding-top: 0;
+        @media screen and (max-width: 1199px) {
+            display: none;    
+        }
     }
 }
 
@@ -119,14 +136,6 @@ img {
 .link:focus::before {
     opacity: 1;
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-}
-
-.no-padding {
-    padding-top: 0;
-
-    @media screen and (max-width: 1199px) {
-        display: none;    
-    }
 }
 
 /*Стилизация заголовков*/
