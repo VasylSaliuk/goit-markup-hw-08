@@ -26,6 +26,7 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
     font-family: Roboto, sans-serif;
     color: $primary-text-color;
     background-color: $primary-white-color;
@@ -70,6 +71,10 @@ img {
     padding-right: 15px;
     padding-left: 15px;
     
+    @media screen and (max-width: 479px) {
+        width: 100vw;
+    }
+
     @media (min-width: $mobile) {
         width: 480px;
     }

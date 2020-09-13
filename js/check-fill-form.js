@@ -1,4 +1,4 @@
-(() => {
+;(() => {
     document
       .querySelector('.form')
       .addEventListener('submit', e => {
@@ -7,5 +7,5 @@
         new FormData(e.currentTarget).forEach((value, name) =>
           console.log(`${name}: ${value}`),
           );
-      });
-  })();
+      })
+  })()
