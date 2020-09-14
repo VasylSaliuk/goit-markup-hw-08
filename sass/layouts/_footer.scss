@@ -88,6 +88,10 @@
 }
 
 .subscribe-form {
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+
 	@media screen and (min-width: $desktop) {
 		display: flex;
 	}
@@ -118,13 +122,12 @@
 
 	@media screen and (max-width: 1199px) {
 		display: block;
-		width: 100%;
 		max-width: 450px;
 		margin: 0 auto 20px auto;
 	}
 
 	@media screen and (min-width: $desktop) {
-		min-width: 358px;
+		max-width: 358px;
 		margin-right: 12px;
     }
 }
